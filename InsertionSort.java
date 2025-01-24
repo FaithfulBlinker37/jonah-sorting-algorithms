@@ -12,6 +12,7 @@ public class InsertionSort implements Sorter {
                 input[j + 1] = input[j];
                 j--;
     }
+    input[j + 1] = key;
  }
 }
 }
