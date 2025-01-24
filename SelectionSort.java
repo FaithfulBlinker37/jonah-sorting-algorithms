@@ -11,5 +11,9 @@ public class SelectionSort implements Sorter {
                     minIndex = j;
                 }
             }
+            int temp = input[minIndex];
+            input[minIndex] = input[i];
+            input[i] = temp;
     }
+}
 }
