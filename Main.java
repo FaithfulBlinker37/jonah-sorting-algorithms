@@ -16,5 +16,28 @@ public class Main {
         // Increase the loop count to get better results once it works.
         // TestSuite.run(testInput, 10000);
         TestSuite.run(testInput, 1);
+        int[] randomInput = generateRandomArray(10);
+
+        System.out.println("\nGenerated Random Input:");
+        printArray(randomInput);
+
+        System.out.println("\nRunning TestSuite with random input:");
+        TestSuite.run(randomInput, 10000);
+    }
+
+    public static int[] generateRandomArray(int size) {
+        Random random = new Random();
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = random.nextInt(100);
+        }
+        return array;
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }
